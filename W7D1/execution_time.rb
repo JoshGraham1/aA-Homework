@@ -27,23 +27,24 @@ list = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
 # end
 
 def largest_contiguous_subsum(list)
-  max_sum = list.max
-  start_idx = 0
-  last_idx = 0
-  while start_idx < list.length
-    if list[start_idx..last_idx].sum > max_sum
-      max_sum = list[start_idx..last_idx].sum
+  current_max = 0
+  current_sum = 0
+  greatest_element = false
+  list.each do |element|
+    if element + current_sum >= 0
+      current_sum += element
+      current_max = current_sum if current_sum > current_max 
+    else
+      current_sum = 0
     end
-    if last_idx == list.length
-      start_idx += 1
-      last_idx = start_idx
-    end
-    last_idx += 1
+    greatest_element = element if !greatest_element || element > greatest_element
   end
-  max_sum
+  if current_max == 0
+    greatest_element
+  else
+    current_max
+  end
 end
-
-# p largest_contiguous_subsum([ 0, 3, 5, 4, -5, 10, 1, 90 ])
 
 list = [5, 3, -7]
 p largest_contiguous_subsum(list) # => 8

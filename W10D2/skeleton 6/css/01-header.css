@@ -1,0 +1,25 @@
+/* PHASE 1: Header */
+
+body {
+  /* Write your css here... */
+  font-family: sans-serif;
+  font-weight: 400, 700;
+  font-size: 24px, 16px, 14px;
+  background: #eee
+}
+
+.header {
+  background-color:white;
+  border-bottom: gray;
+  border-left: gray;
+}
+
+.header a {
+
+}
+
+.header-nav {
+  width: 900px;
+  background-color: green;
+  margin: auto;
+}
