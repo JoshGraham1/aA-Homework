@@ -1,0 +1,51 @@
+.title {
+  text-align: center;
+}
+
+.board {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    border: 1px solid #000;
+}
+
+.square {
+    background-color: #ccc;
+    width: 33%;
+    border: 1px solid #000;
+}
+    .square:hover {
+        background: yellow;
+    }
+
+.x {
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .x::after {
+        content: 'x';
+    }
+
+.o {
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .o::after {
+        content: 'o';
+    }
+
+.winner-flash {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 25px;
+}

@@ -1,0 +1,25 @@
+/* PHASE 9: Forms */
+
+.thumb {
+    /* float: left; */
+}
+
+#wall-form {
+    /* float: right; */
+    /* width: 400px; */
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#wall-form label {
+    font-weight: bold;
+    display: block;
+}
+
+#wall-form input[type="text"] {
+    background-color: #fff;
+}
+
+#wall-form textarea {
+    background-color: #fff;
+}
